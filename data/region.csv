@@ -1,8 +1,8 @@
-name
-Northeast
-Southeast
-Great Lake
-Midwest
-South
-Northwest
-SouthWest
+id,name
+1,Northeast
+2,Southeast
+3,Great Lake
+4,Midwest
+5,South
+6,Northwest
+7,SouthWest

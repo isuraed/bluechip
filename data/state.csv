@@ -1,51 +1,51 @@
-name,region,player_frequency
-Alabama,2,83
-Alaska,6,1
-Arizona,7,76
-Arkansas,5,23
-California,7,351
-Colorado,4,23
-Connecticut,1,6
-Delaware,1,3
-Florida,2,318
-Georgia,2,161
-Hawaii,7,18
-Idaho,6,5
-Illinois,3,67
-Indiana,3,45
-Iowa,4,19
-Kansas,4,39
-Kentucky,2,17
-Louisiana,5,89
-Maine,1,0
-Maryland,1,40
-Massachusetts,1,13
-Michigan,3,74
-Minnesota,3,19
-Mississippi,2,76
-Missouri,4,22
-Montana,4,1
-Nebraska,4,4
-Nevada,7,9
-New Hampshire,1,1
-New Jersey,1,51
-New Mexico,5,4
-New York,1,33
-North Carolina,2,56
-North Dakota,4,1
-Ohio,3,163
-Oklahoma,5,33
-Oregon,6,11
-Pennsylvania,1,87
-Rhode Island,1,0
-South Carolina,2,32
-South Dakota,4,0
-Tennessee,2,42
-Texas,5,381
-Utah,4,24
-Vermont,1,0
-Virginia,2,66
-Washington,6,33
-West Virginia,2,4
-Wisconsin,3,14
-Wyoming,4,0
+id,name,region_id,player_frequency
+1,Alabama,2,83
+2,Alaska,6,1
+3,Arizona,7,76
+4,Arkansas,5,23
+5,California,7,351
+6,Colorado,4,23
+7,Connecticut,1,6
+8,Delaware,1,3
+9,Florida,2,318
+10,Georgia,2,161
+11,Hawaii,7,18
+12,Idaho,6,5
+13,Illinois,3,67
+14,Indiana,3,45
+15,Iowa,4,19
+16,Kansas,4,39
+17,Kentucky,2,17
+18,Louisiana,5,89
+19,Maine,1,0
+20,Maryland,1,40
+21,Massachusetts,1,13
+22,Michigan,3,74
+23,Minnesota,3,19
+24,Mississippi,2,76
+25,Missouri,4,22
+26,Montana,4,1
+27,Nebraska,4,4
+28,Nevada,7,9
+29,New Hampshire,1,1
+30,New Jersey,1,51
+31,New Mexico,5,4
+32,New York,1,33
+33,North Carolina,2,56
+34,North Dakota,4,1
+35,Ohio,3,163
+36,Oklahoma,5,33
+37,Oregon,6,11
+38,Pennsylvania,1,87
+39,Rhode Island,1,0
+40,South Carolina,2,32
+41,South Dakota,4,0
+42,Tennessee,2,42
+43,Texas,5,381
+44,Utah,4,24
+45,Vermont,1,0
+46,Virginia,2,66
+47,Washington,6,33
+48,West Virginia,2,4
+49,Wisconsin,3,14
+50,Wyoming,4,0
