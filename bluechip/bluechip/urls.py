@@ -6,7 +6,8 @@ from player.views import bootstrap
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^$', bootstrap)
+	url(r'^$', bootstrap),
+	url(r'^player/', include('player.urls')),
     # Examples:
     # url(r'^$', 'bluechip.views.home', name='home'),
     # url(r'^bluechip/', include('bluechip.foo.urls')),
