@@ -1,1 +1,5 @@
-# Create your views here.
+from django.shortcuts import render
+
+
+def bootstrap(request):
+	return render(request, 'bootstrap.html')
