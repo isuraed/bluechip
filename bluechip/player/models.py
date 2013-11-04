@@ -97,14 +97,12 @@ class PlayerManager(models.Manager):
         position = Position.objects.get(id=position_id)
         profile_point = ProfilePoint.objects.get(id=profile_point_id)
         grade = profile_point.grade
-        star = profile_point.star
 
         player = self.create(first_name=first_name,
                              last_name=last_name,
                              state=state,
                              position=position,
-                             grade=grade,
-                             star_rating=star)
+                             grade=grade)
 
         return player
 
