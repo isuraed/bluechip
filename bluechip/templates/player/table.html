@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<table>
+	<tr>
+    <th>Name</th>
+    <th>Position</th>
+    <th>State</th>
+    <th>Grade</th>
+  </tr>
+  {% for p in players_list %}
+  <tr>
+    <td>{{ p.first_name }} {{ p.last_name }}</td>
+    <td>{{ p.position }}</td>
+    <td>{{ p.state }}</td>
+    <td>{{ p.grade }}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
