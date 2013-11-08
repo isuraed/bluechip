@@ -1,12 +1,10 @@
 from django.conf.urls import patterns, include, url
-from player.views import bootstrap
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^$', bootstrap),
 	url(r'^player/', include('player.urls')),
     # Examples:
     # url(r'^$', 'bluechip.views.home', name='home'),

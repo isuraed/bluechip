@@ -1,9 +1,6 @@
 from django.shortcuts import render
 from models import Player
 
-def bootstrap(request):
-	return render(request, 'bootstrap.html')
-
 
 def all(request):
 	players_list = Player.objects.all()
