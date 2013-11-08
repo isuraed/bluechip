@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from models import Player
+from models import Player, Position
 
 def home(request):
-	return render(request, 'player/home.html')
+	positions = Position.objects.all()
+	return render(request, 'player/home.html', {'positions': positions})
 
 
 def all(request):
@@ -12,6 +13,11 @@ def all(request):
 
 def top_100(request):
 	players_list = Player.objects.all().order_by('-grade')[:100]
+	return render(request, 'player/table.html', {'players_list': players_list})
+
+
+def by_position(request, position_name):
+	players_list = Player.objects.filter(position__name=position_name).order_by('-grade')
 	return render(request, 'player/table.html', {'players_list': players_list})
 
 
