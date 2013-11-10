@@ -11,7 +11,7 @@
   </tr>
   {% for p in players_list %}
   <tr>
-    <td>{{ p.first_name }} {{ p.last_name }}</td>
+    <td><a href="http://localhost:8000/player/player-{{ p.id }}/">{{ p.first_name }} {{ p.last_name }}</td>
     <td>{{ p.position }}</td>
     <td>{{ p.state }}</td>
     <td>{{ p.grade }}</td>
