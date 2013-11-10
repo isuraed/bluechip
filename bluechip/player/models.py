@@ -115,3 +115,13 @@ class Player(models.Model):
 	grade = models.IntegerField()
 
 	objects = PlayerManager()
+
+
+class Pitch(models.Model):
+    name = models.CharField(max_length=255)
+
+
+class PlayerPitchWeight(models.Model):
+    player = models.ForeignKey(Player)
+    pitch = models.ForeignKey(Pitch)
+    weight = models.DecimalField(max_digits=4, decimal_places=4)
