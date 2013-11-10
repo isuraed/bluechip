@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<p>{{ player.first_name }} {{ player.last_name }}</p>
+<table>
+	<tr>
+    <th>Pitch</th>
+    <th>Weight</th>
+  </tr>
+  {% for pw in pitch_weights %}
+  <tr>
+    <td>{{ pw.pitch.name }}</td>
+    <td>{% widthratio pw.weight 1 100 %}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
