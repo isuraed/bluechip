@@ -3,6 +3,7 @@ from player import views
 
 urlpatterns = patterns('',
 	url(r'^$', views.home),
+	url(r'^create-players/$', views.create_players),
 	url(r'^all/$', views.all),
   	url(r'^top-100/$', views.top_100),
   	url(r'^by-position/([^/]+)/$', views.by_position),

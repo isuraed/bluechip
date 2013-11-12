@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <body>
-<ul>
-	<li><a href="all/">All</a></li>
-	<li><a href="top-100/">Top 100</a></li>
-	<li>By Position
-		<ul>
-    {% for pos in positions %}
-      <li><a href="by-position/{{ pos.name }}/">{{ pos.name }}</a></li>
-    {% endfor %}
-    </ul>
-  </li>
-</ul>
+<a href="create-players/">Generate Recruits</a>
+<nav>
+  <ul>
+  	<li><a href="all/">All</a></li>
+  	<li><a href="top-100/">Top 100</a></li>
+  	<li>By Position
+  		<ul>
+      {% for pos in positions %}
+        <li><a href="by-position/{{ pos.name }}/">{{ pos.name }}</a></li>
+      {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</nav>
 </body>
 </html>
