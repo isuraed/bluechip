@@ -1,0 +1,51 @@
+id,name,frequency
+1,Alabama,83
+2,Alaska,1
+3,Arizona,76
+4,Arkansas,23
+5,California,351
+6,Colorado,23
+7,Connecticut,6
+8,Delaware,3
+9,Florida,318
+10,Georgia,161
+11,Hawaii,18
+12,Idaho,5
+13,Illinois,67
+14,Indiana,45
+15,Iowa,19
+16,Kansas,39
+17,Kentucky,17
+18,Louisiana,89
+19,Maine,0
+20,Maryland,40
+21,Massachusetts,13
+22,Michigan,74
+23,Minnesota,19
+24,Mississippi,76
+25,Missouri,22
+26,Montana,1
+27,Nebraska,4
+28,Nevada,9
+29,New Hampshire,1
+30,New Jersey,51
+31,New Mexico,4
+32,New York,33
+33,North Carolina,56
+34,North Dakota,1
+35,Ohio,163
+36,Oklahoma,33
+37,Oregon,11
+38,Pennsylvania,87
+39,Rhode Island,0
+40,South Carolina,32
+41,South Dakota,0
+42,Tennessee,42
+43,Texas,381
+44,Utah,24
+45,Vermont,0
+46,Virginia,66
+47,Washington,33
+48,West Virginia,4
+49,Wisconsin,14
+50,Wyoming,0

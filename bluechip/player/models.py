@@ -18,14 +18,9 @@ class LastName(models.Model):
         return self.name
         
 
-class Region(models.Model):
-    name = models.CharField(max_length=255)
-
-
 class State(models.Model):
     name = models.CharField(max_length=255)
-    region = models.ForeignKey(Region)
-    player_frequency = models.IntegerField()
+    frequency = models.IntegerField()
 
     def __unicode__(self):
         return self.name
@@ -33,7 +28,7 @@ class State(models.Model):
 
 class Position(models.Model):
     name = models.CharField(max_length=255)
-    player_frequency = models.IntegerField()
+    frequency = models.IntegerField()
 
     def __unicode__(self):
         return self.name
@@ -75,12 +70,7 @@ class PlayerManager(models.Manager):
 
         frequency_dist = []
         for row in records:
-            if modelName == "FirstName" or \
-                            modelName == "LastName" or \
-                            modelName == "ProfilePoint":
-                frequency_dist.append((row.id, row.frequency))
-            elif modelName == "State" or modelName == "Position":
-                frequency_dist.append((row.id, row.player_frequency))
+            frequency_dist.append((row.id, row.frequency))
 
         return frequency_dist
 
@@ -121,7 +111,7 @@ class Pitch(models.Model):
     name = models.CharField(max_length=255)
 
 
-class PlayerPitchWeight(models.Model):
+class PitchWeight(models.Model):
     player = models.ForeignKey(Player)
     pitch = models.ForeignKey(Pitch)
     weight = models.DecimalField(max_digits=4, decimal_places=4)
