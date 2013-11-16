@@ -3,14 +3,13 @@ import random
 
 class Distribution:
     def __init__(self, frequency_dist):
-        self.cumulative_dist = []
-        self.total_freq = 0
+        self.weighted_values = []
         for point in frequency_dist:
-            self.cumulative_dist.append((point[0], self.total_freq + point[1]))
-            self.total_freq += point[1]
+            freq = point[1]
+            if freq > 0:
+                for n in xrange(freq):
+                    self.weighted_values.append(point[0])
+
 
     def generate_value(self):
-        pick = random.randint(1, self.total_freq)
-        for point in self.cumulative_dist:
-            if pick <= point[1]:
-                return point[0]
+        return random.choice(self.weighted_values)
