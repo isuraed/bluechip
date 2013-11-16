@@ -1,0 +1,13 @@
+Home towns
+Position based talent
+Talent curves
+Height and weights
+Height (weight) distribution based on position
+Star rating
+Improve creation performance
+Overall, position, and state ranking
+Bootstrap frontend
+Filter by position, state
+Top 100 and view all
+Player rankings view
+Player detail view
