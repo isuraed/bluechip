@@ -9,34 +9,10 @@ def create_players(request):
 
 	# For now just create a new class each
 	Player.objects.all().delete()
+	PitchWeight.objects.all().delete()
 	for _ in xrange(3000):
 		p = Player.objects.create_player()
-		p.save
-
-	pitch_records = Pitch.objects.all().order_by('id')
-	pitches_count = pitch_records.count()
-	mu = 1.0 / pitches_count
-	sigma = (2.0 / 3.0) * mu
-	PitchWeight.objects.all().delete()
-	
-	for p in Player.objects.all():
-		weights = []
-		sum_weights = 0
-		for _ in xrange(pitches_count):
-			w = random.normalvariate(mu, sigma)
-			w = max(w, 0.0)
-			weights.append(w)
-			sum_weights += w
-
-		# Normalize weights before creating records
-		for i in xrange(len(weights)):
-			weights[i] /= sum_weights
-
-		j = 0
-		for pitch in pitch_records:
-			pw = PitchWeight(player=p, pitch=pitch, weight=weights[j])
-			pw.save()
-			j += 1
+		Player.objects.create_pitch_weights(p)
 	
 	return render(request, 'player/done.html')
 

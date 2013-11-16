@@ -1,3 +1,4 @@
+import random
 from django.db import models
 from distribution import Distribution
 
@@ -94,7 +95,33 @@ class PlayerManager(models.Manager):
                              position=position,
                              grade=grade)
 
+        player.save
         return player
+
+
+    def create_pitch_weights(self, player):
+        pitch_records = Pitch.objects.all().order_by('id')
+        pitches_count = pitch_records.count()        
+        mu = 1.0 / pitches_count
+        sigma = (2.0 / 3.0) * mu        
+        weights = []
+        sum_weights = 0
+        
+        for _ in xrange(pitches_count):
+          w = random.normalvariate(mu, sigma)
+          w = max(w, 0.0)
+          weights.append(w)
+          sum_weights += w
+
+        # Normalize weights before creating records
+        for i in xrange(len(weights)):
+            weights[i] /= sum_weights
+
+        j = 0
+        for pitch in pitch_records:
+            pw = PitchWeight(player=player, pitch=pitch, weight=weights[j])
+            pw.save()
+            j += 1
 
         
 class Player(models.Model):
